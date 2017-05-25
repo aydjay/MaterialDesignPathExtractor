@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaterialDesignPathExtractor", "MaterialDesignPathExtractor\MaterialDesignPathExtractor.csproj", "{F7DF9821-2C4E-42A5-A3D7-7892AAC7376E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MD.Visualiser", "MaterialDesignPathExtractor\MD.Visualiser.csproj", "{F7DF9821-2C4E-42A5-A3D7-7892AAC7376E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MD.Extractor", "MD.Extractor\MD.Extractor.csproj", "{8EC6034A-2040-47CA-8CFE-0D7E77130985}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{F7DF9821-2C4E-42A5-A3D7-7892AAC7376E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F7DF9821-2C4E-42A5-A3D7-7892AAC7376E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F7DF9821-2C4E-42A5-A3D7-7892AAC7376E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8EC6034A-2040-47CA-8CFE-0D7E77130985}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EC6034A-2040-47CA-8CFE-0D7E77130985}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EC6034A-2040-47CA-8CFE-0D7E77130985}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EC6034A-2040-47CA-8CFE-0D7E77130985}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
