@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MD.Visualiser", "MaterialDe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MD.Extractor", "MD.Extractor\MD.Extractor.csproj", "{8EC6034A-2040-47CA-8CFE-0D7E77130985}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MD.Tests", "MD.Tests\MD.Tests.csproj", "{D7A20377-01F4-4A8D-8057-9433572B19E1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{8EC6034A-2040-47CA-8CFE-0D7E77130985}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8EC6034A-2040-47CA-8CFE-0D7E77130985}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8EC6034A-2040-47CA-8CFE-0D7E77130985}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7A20377-01F4-4A8D-8057-9433572B19E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7A20377-01F4-4A8D-8057-9433572B19E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7A20377-01F4-4A8D-8057-9433572B19E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7A20377-01F4-4A8D-8057-9433572B19E1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
