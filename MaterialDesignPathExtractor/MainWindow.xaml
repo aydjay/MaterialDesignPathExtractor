@@ -5,8 +5,33 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MaterialDesignPathExtractor"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        <VirtualizingStackPanel />
-    </Grid>
+        Title="MainWindow" Height="350" Width="525" d:DataContext="{d:DesignInstance local:MainWindow}">
+    <DockPanel>
+        <DockPanel  DockPanel.Dock="Bottom" >
+            <Label>Filter:</Label>
+
+            <Button DockPanel.Dock="Right" Command="{Binding FilterCommand}" Margin="4">Filter</Button>
+            <TextBox  Margin="4,0,4,0" Text="{Binding Filter, UpdateSourceTrigger=PropertyChanged}">
+                <TextBox.InputBindings>
+                    <KeyBinding Command="{Binding FilterCommand}" Key="Enter" />
+                </TextBox.InputBindings>
+            </TextBox>
+        </DockPanel>
+        <ListBox ItemsSource="{Binding Images}" 
+                 ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                 ScrollViewer.IsDeferredScrollingEnabled="True">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <Image Source="{Binding Value}" Width="64" Height="64"  ToolTip="{Binding Key}"/>
+                        <TextBlock Text="{Binding Key}" MaxWidth="64"/></StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+            <ListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel/>
+                </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
+        </ListBox>
+    </DockPanel>
 </Window>
