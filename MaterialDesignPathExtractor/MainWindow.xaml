@@ -17,13 +17,23 @@
             </TextBox>
         </DockPanel>
         <ListBox ItemsSource="{Binding Images}" 
+                 SelectedItem="{Binding Image}"
                  ScrollViewer.HorizontalScrollBarVisibility="Disabled"
                  ScrollViewer.IsDeferredScrollingEnabled="True">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
+                        <StackPanel.ContextMenu>
+                            <ContextMenu>
+                                <MenuItem Command="{Binding RelativeSource=
+                                                            {RelativeSource FindAncestor, 
+                                                            AncestorType={x:Type local:MainWindow}}, 
+                                                            Path=CopyXamlCommand}">Copy Xaml</MenuItem>
+                            </ContextMenu>
+                        </StackPanel.ContextMenu>
                         <Image Source="{Binding Value}" Width="64" Height="64"  ToolTip="{Binding Key}"/>
-                        <TextBlock Text="{Binding Key}" MaxWidth="64"/></StackPanel>
+                        <TextBlock Text="{Binding Key}" MaxWidth="64"/>
+                    </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>
             <ListBox.ItemsPanel>

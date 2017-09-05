@@ -17,6 +17,7 @@ namespace MaterialDesignPathExtractor
         private string _filter;
         private Dictionary<string, ImageSource> _images = new Dictionary<string, ImageSource>();
         private Dictionary<string, ImageSource> _storedImages = new Dictionary<string, ImageSource>();
+        private KeyValuePair<string, ImageSource> _image;
 
         public MainWindow()
         {
@@ -30,6 +31,12 @@ namespace MaterialDesignPathExtractor
                     StoredImages.Add(currentResource.Key.ToString(), currentResource.Value as ImageSource);
 
             Images = StoredImages;
+        }
+
+        public KeyValuePair<string, ImageSource> Image
+        {
+            get { return _image; }
+            set { _image = value; OnPropertyChanged();}
         }
 
         public Dictionary<string, ImageSource> Images
@@ -68,6 +75,12 @@ namespace MaterialDesignPathExtractor
                 Images = StoredImages;
 
             Images = StoredImages.Where(image => image.Key.ToLower().Contains(Filter.ToLower())).ToDictionary(p => p.Key, p => p.Value);
+        });
+
+        public ICommand CopyXamlCommand => new RelayCommand(x =>
+        {
+            MessageBox.Show(Image.Key);
+
         });
 
         public event PropertyChangedEventHandler PropertyChanged;
